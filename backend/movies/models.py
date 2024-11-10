@@ -14,9 +14,11 @@ class Movie(models.Model):
 
 class Rating(models.Model):
     movie = models.ForeignKey(Movie, related_name='ratings', on_delete=models.CASCADE)
-    storyline = models.IntegerField()
+    storywriting = models.IntegerField()
+    direction = models.IntegerField()
     acting = models.IntegerField()
     cinematography = models.IntegerField()
+    score = models.IntegerField()
     overall_score = models.FloatField()
     # Add other metrics as needed
 
